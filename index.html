@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Biswadeep Mishra | TechOps Portfolio</title>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
 <style>
 
@@ -12,20 +16,20 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Segoe UI,Arial;
+scroll-behavior:smooth;
 }
 
 body{
 background:#0f172a;
 color:#e2e8f0;
-line-height:1.6;
 }
 
 header{
-background:#020617;
-padding:40px 10%;
 display:flex;
 justify-content:space-between;
 align-items:center;
+padding:20px 10%;
+background:#020617;
 border-bottom:1px solid #1e293b;
 }
 
@@ -45,25 +49,25 @@ color:#38bdf8;
 }
 
 .hero{
-padding:100px 10%;
+height:90vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
+padding:0 10%;
 }
 
 .hero h2{
 font-size:40px;
-color:white;
 }
 
 .hero span{
 color:#38bdf8;
 }
 
-.hero p{
-margin-top:15px;
-max-width:600px;
-color:#94a3b8;
+.hero h3{
+margin-top:10px;
+color:#38bdf8;
+font-weight:400;
 }
 
 .section{
@@ -71,9 +75,8 @@ padding:80px 10%;
 }
 
 .section h2{
-font-size:30px;
-margin-bottom:30px;
 color:#38bdf8;
+margin-bottom:30px;
 }
 
 .card{
@@ -82,11 +85,17 @@ padding:25px;
 border-radius:10px;
 border:1px solid #1e293b;
 margin-bottom:20px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+border:1px solid #38bdf8;
 }
 
 .skills{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
 gap:20px;
 }
 
@@ -96,9 +105,11 @@ padding:20px;
 border-radius:8px;
 border:1px solid #1e293b;
 text-align:center;
+transition:0.3s;
 }
 
 .skill-box:hover{
+transform:scale(1.05);
 border:1px solid #38bdf8;
 }
 
@@ -111,37 +122,36 @@ padding-left:20px;
 margin-bottom:30px;
 }
 
-.project{
-margin-bottom:25px;
-}
-
-footer{
-text-align:center;
-padding:30px;
-background:#020617;
-margin-top:50px;
-border-top:1px solid #1e293b;
-}
-
 button{
 background:#38bdf8;
 border:none;
-padding:10px 20px;
-border-radius:5px;
+padding:12px 20px;
+border-radius:6px;
 cursor:pointer;
 margin-top:15px;
+font-size:15px;
 }
 
 button:hover{
 background:#0ea5e9;
 }
 
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+margin-top:40px;
+}
+
 </style>
 </head>
 
+
 <body>
 
+
 <header>
+
 <h1>Biswadeep</h1>
 
 <nav>
@@ -151,16 +161,19 @@ background:#0ea5e9;
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
+
 </header>
 
 
 <section class="hero">
+
 <h2>Hi, I'm <span>Biswadeep Mishra</span></h2>
 
-<p>
-Technical Support Associate experienced in SaaS product support, VoIP platforms,
-API integrations and SQL troubleshooting. Passionate about solving production
-issues, debugging systems and improving customer experience.
+<h3>I work as <span id="typing"></span></h3>
+
+<p style="margin-top:15px; max-width:600px; color:#94a3b8;">
+Technical Support Associate experienced in SaaS product support,
+SQL troubleshooting, API debugging and incident resolution.
 </p>
 
 </section>
@@ -171,16 +184,17 @@ issues, debugging systems and improving customer experience.
 <h2>About Me</h2>
 
 <div class="card">
+
 <p>
-I am a Technical Support professional with experience supporting SaaS platforms
-and VoIP communication systems. I specialize in troubleshooting customer issues,
-analyzing logs, validating API integrations, and resolving incidents under SLA
-timelines. I collaborate closely with engineering and product teams to reproduce
-issues and deliver reliable solutions.
+Technical Support professional experienced in supporting SaaS communication
+platforms and resolving customer technical issues. Skilled in SQL queries,
+API troubleshooting, system debugging and log analysis.
 </p>
+
 </div>
 
 </section>
+
 
 
 <section class="section" id="skills">
@@ -191,16 +205,17 @@ issues and deliver reliable solutions.
 
 <div class="skill-box">SQL</div>
 <div class="skill-box">API Troubleshooting</div>
+<div class="skill-box">Postman</div>
 <div class="skill-box">Log Analysis</div>
 <div class="skill-box">VoIP Platforms</div>
 <div class="skill-box">CRM Systems</div>
-<div class="skill-box">SaaS Support</div>
 <div class="skill-box">Incident Management</div>
-<div class="skill-box">Remote Debugging</div>
+<div class="skill-box">Technical Support</div>
 
 </div>
 
 </section>
+
 
 
 <section class="section" id="experience">
@@ -210,51 +225,66 @@ issues and deliver reliable solutions.
 <div class="timeline">
 
 <div class="timeline-item">
+
 <h3>Technical Support Associate</h3>
 <p><b>Superfone – Bangalore</b></p>
 
 <p>
-Provide technical support for SaaS communication platform. Investigate customer
-issues related to VoIP calls, integrations and system performance. Use SQL
-queries, logs and API validation to diagnose problems and coordinate with
-engineering teams to resolve incidents.
+Handled technical issues for SaaS communication platform including VoIP
+call failures, API integrations and data discrepancies. Investigated
+system logs, executed SQL queries and collaborated with engineering teams
+to resolve incidents within SLA timelines.
 </p>
+
 </div>
 
 </div>
 
 </section>
+
 
 
 <section class="section" id="projects">
 
 <h2>Projects</h2>
 
-<div class="card project">
-<h3>API Error Troubleshooting</h3>
+<div class="card">
+
+<h3>API Troubleshooting</h3>
+
 <p>
-Analyzed API responses to identify HTTP errors such as 400, 404 and 500.
-Used debugging tools to validate request payloads and improve integration reliability.
+Debugged API requests and responses to identify HTTP errors such as
+400, 404 and 500 using Postman and developer tools.
 </p>
+
 </div>
 
-<div class="card project">
+
+<div class="card">
+
 <h3>SQL Data Investigation</h3>
+
 <p>
-Used SQL queries to analyze user records and troubleshoot data inconsistencies
-reported by customers.
+Analyzed booking and user data using SQL queries to troubleshoot
+customer-reported issues.
 </p>
+
 </div>
 
-<div class="card project">
-<h3>Log Monitoring</h3>
+
+<div class="card">
+
+<h3>System Log Analysis</h3>
+
 <p>
-Reviewed application logs to trace production issues and identify root causes
-for failed transactions.
+Reviewed application logs to identify root causes for production
+incidents and failed transactions.
 </p>
+
 </div>
 
 </section>
+
 
 
 <section class="section" id="contact">
@@ -263,9 +293,9 @@ for failed transactions.
 
 <div class="card">
 
-<p>Email: rmishra.connect@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/biswadeep-mishra</p>
+<p>Email: biswadeepmishra3@gmail.com</p>
 <p>Phone: +91 8420177256</p>
+<p>LinkedIn: linkedin.com/in/biswadeep-mishra</p>
 
 <button onclick="window.location.href='mailto:rmishra.connect@gmail.com'">
 Send Email
@@ -276,11 +306,35 @@ Send Email
 </section>
 
 
+
 <footer>
 
 <p>© 2026 Biswadeep Mishra | TechOps Portfolio</p>
 
 </footer>
+
+
+
+<script>
+
+var typed = new Typed("#typing", {
+
+strings:[
+"TechOps Engineer",
+"Product Support Engineer",
+"SQL Troubleshooter",
+"API Debugging Specialist",
+"Technical Support Engineer"
+],
+
+typeSpeed:60,
+backSpeed:40,
+loop:true
+
+});
+
+</script>
+
 
 </body>
 </html>
