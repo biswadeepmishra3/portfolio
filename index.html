@@ -24,24 +24,25 @@ background:white;
 color:#111;
 }
 
+/* HEADER */
+
 header{
 display:flex;
 justify-content:space-between;
 align-items:center;
 padding:20px 10%;
+border-bottom:1px solid #eee;
 background:white;
-border-bottom:2px solid #e5e7eb;
 }
 
 header h1{
 color:#2563eb;
-font-size:26px;
 }
 
 nav a{
-color:#111;
 margin-left:25px;
 text-decoration:none;
+color:#111;
 font-weight:500;
 }
 
@@ -49,17 +50,22 @@ nav a:hover{
 color:#2563eb;
 }
 
+/* HERO */
+
 .hero{
-height:85vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
-padding:0 10%;
+align-items:center;
+justify-content:space-between;
+padding:80px 10%;
+flex-wrap:wrap;
+}
+
+.hero-text{
+max-width:600px;
 }
 
 .hero h2{
 font-size:42px;
-color:#111;
 }
 
 .hero span{
@@ -69,14 +75,16 @@ color:#2563eb;
 .hero h3{
 margin-top:10px;
 color:#2563eb;
-font-weight:500;
 }
 
-.hero p{
-margin-top:15px;
-max-width:600px;
-color:#333;
+.hero img{
+width:220px;
+border-radius:50%;
+border:5px solid #2563eb;
+box-shadow:0 0 40px rgba(37,99,235,0.4);
 }
+
+/* SECTIONS */
 
 .section{
 padding:80px 10%;
@@ -85,53 +93,56 @@ padding:80px 10%;
 .section h2{
 color:#2563eb;
 margin-bottom:30px;
-font-size:30px;
 }
+
+/* CARDS */
 
 .card{
 background:white;
 padding:25px;
+border:1px solid #eee;
 border-radius:10px;
-border:1px solid #e5e7eb;
 margin-bottom:20px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-6px);
-border:1px solid #2563eb;
+transform:translateY(-5px);
 box-shadow:0 10px 20px rgba(0,0,0,0.05);
 }
 
-.skills{
+/* SKILL BARS */
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill-name{
+margin-bottom:5px;
+}
+
+.progress{
+background:#eee;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:10px;
+background:#2563eb;
+width:0;
+transition:1.5s;
+}
+
+/* PROJECT GRID */
+
+.projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 gap:20px;
 }
 
-.skill-box{
-background:white;
-padding:20px;
-border-radius:8px;
-border:1px solid #e5e7eb;
-text-align:center;
-transition:0.3s;
-font-weight:500;
-}
-
-.skill-box:hover{
-transform:scale(1.05);
-border:1px solid #2563eb;
-}
-
-.timeline{
-border-left:3px solid #2563eb;
-padding-left:20px;
-}
-
-.timeline-item{
-margin-bottom:30px;
-}
+/* CONTACT */
 
 button{
 background:#2563eb;
@@ -140,27 +151,28 @@ border:none;
 padding:12px 20px;
 border-radius:6px;
 cursor:pointer;
-margin-top:15px;
-font-size:15px;
+margin-top:10px;
 }
 
 button:hover{
 background:#1d4ed8;
 }
 
+/* FOOTER */
+
 footer{
 text-align:center;
 padding:30px;
+border-top:1px solid #eee;
 margin-top:40px;
-border-top:1px solid #e5e7eb;
 color:#555;
 }
 
 </style>
 </head>
 
-<body>
 
+<body>
 
 <header>
 
@@ -169,7 +181,6 @@ color:#555;
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
@@ -177,19 +188,30 @@ color:#555;
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
-<h2>Hello, I'm <span>Biswadeep Mishra</span></h2>
+<div class="hero-text">
+
+<h2>Hello I'm <span>Biswadeep Mishra</span></h2>
 
 <h3>I work as <span id="typing"></span></h3>
 
-<p>
-VoIP Enginner experienced in SaaS product support,
-SQL troubleshooting, API debugging and incident resolution.
+<p style="margin-top:15px; color:#444;">
+VoIP Engineer experienced in SaaS platforms,
+SQL troubleshooting, API debugging and production issue resolution.
 </p>
+
+</div>
+
+<img src="https://i.imgur.com/8Km9tLL.png">
 
 </section>
 
+
+
+<!-- ABOUT -->
 
 <section class="section" id="about">
 
@@ -198,102 +220,64 @@ SQL troubleshooting, API debugging and incident resolution.
 <div class="card">
 
 <p>
-VoIP Engineer professional experienced in supporting SaaS communication
-platforms and resolving customer technical issues. Skilled in SQL queries,
-API troubleshooting, system debugging and log analysis.
+VoIP Engineer with experience in SaaS platforms,
+API troubleshooting and SQL data investigation. Passionate about
+debugging system issues and delivering high quality customer support.
 </p>
 
 </div>
 
 </section>
 
+
+
+<!-- SKILLS -->
 
 <section class="section" id="skills">
 
 <h2>Technical Skills</h2>
 
-<div class="skills">
+<div class="skill">
+<div class="skill-name">SQL</div>
+<div class="progress"><div class="progress-bar" data-width="90%"></div></div>
+</div>
 
-<div class="skill-box">SQL</div>
-<div class="skill-box">API Troubleshooting</div>
-<div class="skill-box">Postman</div>
-<div class="skill-box">Log Analysis</div>
-<div class="skill-box">VoIP Platforms</div>
-<div class="skill-box">CRM Systems</div>
-<div class="skill-box">Incident Management</div>
-<div class="skill-box">Technical Support</div>
+<div class="skill">
+<div class="skill-name">API Troubleshooting</div>
+<div class="progress"><div class="progress-bar" data-width="85%"></div></div>
+</div>
 
+<div class="skill">
+<div class="skill-name">Log Analysis</div>
+<div class="progress"><div class="progress-bar" data-width="80%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Technical Support</div>
+<div class="progress"><div class="progress-bar" data-width="90%"></div></div>
 </div>
 
 </section>
 
 
-<section class="section" id="experience">
 
-<h2>Experience</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>VoIP Engineer</h3>
-<p><b>Superfone – Bangalore</b></p>
-
-<p>
-Handled technical issues for SaaS communication platform including VoIP
-call failures, API integrations and data discrepancies. Investigated
-system logs, executed SQL queries and collaborated with engineering teams
-to resolve incidents within SLA timelines.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
+<!-- PROJECTS -->
 
 <section class="section" id="projects">
 
-<h2>Projects</h2>
+<h2>GitHub Projects</h2>
 
-<div class="card">
+<div class="projects" id="github-projects">
 
-<h3>API Troubleshooting</h3>
-
-<p>
-Debugged API requests and responses to identify HTTP errors such as
-400, 404 and 500 using Postman and developer tools.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>SQL Data Investigation</h3>
-
-<p>
-Analyzed booking and user data using SQL queries to troubleshoot
-customer-reported issues.
-</p>
-
-</div>
-
-
-<div class="card">
-
-<h3>System Log Analysis</h3>
-
-<p>
-Reviewed application logs to identify root causes for production
-incidents and failed transactions.
-</p>
+Loading projects...
 
 </div>
 
 </section>
 
+
+
+<!-- CONTACT -->
 
 <section class="section" id="contact">
 
@@ -321,7 +305,10 @@ Send Email
 </footer>
 
 
+
 <script>
+
+/* typing animation */
 
 var typed = new Typed("#typing", {
 
@@ -329,8 +316,7 @@ strings:[
 "TechOps Engineer",
 "Product Support Engineer",
 "SQL Troubleshooter",
-"API Debugging Specialist",
-"Technical Support Engineer"
+"API Debugging Specialist"
 ],
 
 typeSpeed:60,
@@ -339,7 +325,46 @@ loop:true
 
 });
 
+
+/* skill bar animation */
+
+window.addEventListener("load", () => {
+
+document.querySelectorAll(".progress-bar").forEach(bar => {
+bar.style.width = bar.dataset.width;
+});
+
+});
+
+
+/* github project loader */
+
+fetch("https://api.github.com/users/YOUR_GITHUB_USERNAME/repos")
+
+.then(res => res.json())
+
+.then(data => {
+
+let container = document.getElementById("github-projects");
+
+container.innerHTML="";
+
+data.slice(0,6).forEach(repo => {
+
+container.innerHTML += `
+<div class="card">
+<h3>${repo.name}</h3>
+<p>${repo.description || "GitHub repository project"}</p>
+<a href="${repo.html_url}" target="_blank">View Project</a>
+</div>
+`;
+
+});
+
+});
+
 </script>
+
 
 </body>
 </html>
