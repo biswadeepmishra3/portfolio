@@ -2,61 +2,138 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biswadeep Mishra | TechOps Portfolio</title>
+
 <style>
 
-body{
-font-family: Arial;
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI,Arial;
+}
+
+body{
 background:#0f172a;
-color:white;
+color:#e2e8f0;
+line-height:1.6;
 }
 
 header{
-background:#1e293b;
-padding:20px;
-text-align:center;
+background:#020617;
+padding:40px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid #1e293b;
 }
 
 header h1{
-margin:0;
-font-size:32px;
-}
-
-nav{
-text-align:center;
-padding:10px;
-background:#334155;
+color:#38bdf8;
 }
 
 nav a{
-color:white;
-margin:15px;
+color:#e2e8f0;
+margin-left:25px;
 text-decoration:none;
-font-weight:bold;
+font-weight:500;
 }
 
-section{
-padding:40px;
-max-width:900px;
-margin:auto;
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+padding:100px 10%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h2{
+font-size:40px;
+color:white;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+.hero p{
+margin-top:15px;
+max-width:600px;
+color:#94a3b8;
+}
+
+.section{
+padding:80px 10%;
+}
+
+.section h2{
+font-size:30px;
+margin-bottom:30px;
+color:#38bdf8;
 }
 
 .card{
-background:#1e293b;
-padding:20px;
-margin:20px 0;
+background:#020617;
+padding:25px;
 border-radius:10px;
+border:1px solid #1e293b;
+margin-bottom:20px;
 }
 
-h2{
-color:#38bdf8;
+.skills{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.skill-box{
+background:#020617;
+padding:20px;
+border-radius:8px;
+border:1px solid #1e293b;
+text-align:center;
+}
+
+.skill-box:hover{
+border:1px solid #38bdf8;
+}
+
+.timeline{
+border-left:2px solid #38bdf8;
+padding-left:20px;
+}
+
+.timeline-item{
+margin-bottom:30px;
+}
+
+.project{
+margin-bottom:25px;
 }
 
 footer{
 text-align:center;
-padding:20px;
-background:#1e293b;
+padding:30px;
+background:#020617;
+margin-top:50px;
+border-top:1px solid #1e293b;
+}
+
+button{
+background:#38bdf8;
+border:none;
+padding:10px 20px;
+border-radius:5px;
+cursor:pointer;
+margin-top:15px;
+}
+
+button:hover{
+background:#0ea5e9;
 }
 
 </style>
@@ -65,72 +142,144 @@ background:#1e293b;
 <body>
 
 <header>
-<h1>Biswadeep Mishra</h1>
-<p>TechOps | Product Support | SQL | API Troubleshooting</p>
-</header>
+<h1>Biswadeep</h1>
 
 <nav>
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
+<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
 <a href="#contact">Contact</a>
 </nav>
+</header>
 
-<section id="about">
+
+<section class="hero">
+<h2>Hi, I'm <span>Biswadeep Mishra</span></h2>
+
+<p>
+Technical Support Associate experienced in SaaS product support, VoIP platforms,
+API integrations and SQL troubleshooting. Passionate about solving production
+issues, debugging systems and improving customer experience.
+</p>
+
+</section>
+
+
+<section class="section" id="about">
+
 <h2>About Me</h2>
+
 <div class="card">
 <p>
-TechOps and Product Support professional experienced in troubleshooting technical issues, 
-analyzing SQL data, and supporting customers. Skilled in API debugging, HTTP response 
-analysis, and database queries.
+I am a Technical Support professional with experience supporting SaaS platforms
+and VoIP communication systems. I specialize in troubleshooting customer issues,
+analyzing logs, validating API integrations, and resolving incidents under SLA
+timelines. I collaborate closely with engineering and product teams to reproduce
+issues and deliver reliable solutions.
 </p>
 </div>
+
 </section>
 
-<section id="skills">
-<h2>Skills</h2>
-<div class="card">
-<ul>
-<li>SQL (MySQL)</li>
-<li>API Troubleshooting</li>
-<li>HTTP Status Codes</li>
-<li>Technical Support</li>
-<li>Log Analysis</li>
-<li>Windows Troubleshooting</li>
-</ul>
+
+<section class="section" id="skills">
+
+<h2>Technical Skills</h2>
+
+<div class="skills">
+
+<div class="skill-box">SQL</div>
+<div class="skill-box">API Troubleshooting</div>
+<div class="skill-box">Log Analysis</div>
+<div class="skill-box">VoIP Platforms</div>
+<div class="skill-box">CRM Systems</div>
+<div class="skill-box">SaaS Support</div>
+<div class="skill-box">Incident Management</div>
+<div class="skill-box">Remote Debugging</div>
+
 </div>
+
 </section>
 
-<section id="projects">
+
+<section class="section" id="experience">
+
+<h2>Experience</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>Technical Support Associate</h3>
+<p><b>Superfone – Bangalore</b></p>
+
+<p>
+Provide technical support for SaaS communication platform. Investigate customer
+issues related to VoIP calls, integrations and system performance. Use SQL
+queries, logs and API validation to diagnose problems and coordinate with
+engineering teams to resolve incidents.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="projects">
+
 <h2>Projects</h2>
 
-<div class="card">
-<h3>API Troubleshooting</h3>
-<p>Analyzed API responses using Postman and Chrome Developer Tools to detect HTTP errors.</p>
+<div class="card project">
+<h3>API Error Troubleshooting</h3>
+<p>
+Analyzed API responses to identify HTTP errors such as 400, 404 and 500.
+Used debugging tools to validate request payloads and improve integration reliability.
+</p>
 </div>
 
-<div class="card">
-<h3>SQL Data Analysis</h3>
-<p>Used SQL queries to analyze booking data and generate insights.</p>
+<div class="card project">
+<h3>SQL Data Investigation</h3>
+<p>
+Used SQL queries to analyze user records and troubleshoot data inconsistencies
+reported by customers.
+</p>
 </div>
 
-<div class="card">
-<h3>Windows Backup Script</h3>
-<p>Created a script to automate file backup in Windows.</p>
+<div class="card project">
+<h3>Log Monitoring</h3>
+<p>
+Reviewed application logs to trace production issues and identify root causes
+for failed transactions.
+</p>
 </div>
 
 </section>
 
-<section id="contact">
+
+<section class="section" id="contact">
+
 <h2>Contact</h2>
+
 <div class="card">
-<p>Email: yourmail@gmail.com</p>
-<p>LinkedIn: linkedin.com/in/yourprofile</p>
+
+<p>Email: rmishra.connect@gmail.com</p>
+<p>LinkedIn: linkedin.com/in/biswadeep-mishra</p>
+<p>Phone: +91 8420177256</p>
+
+<button onclick="window.location.href='mailto:rmishra.connect@gmail.com'">
+Send Email
+</button>
+
 </div>
+
 </section>
+
 
 <footer>
-<p>© 2026 Biswadeep Mishra</p>
+
+<p>© 2026 Biswadeep Mishra | TechOps Portfolio</p>
+
 </footer>
 
 </body>
