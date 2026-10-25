@@ -1,345 +1,679 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio of Biswadeep Mishra, Product Support Specialist focused on SaaS support, API integrations, incident investigation, and customer case management.">
+  <title>Portfolio | Biswadeep Mishra</title>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    :root {
+      --blue: #2563eb;
+      --blue-dark: #1d4ed8;
+      --text: #172033;
+      --muted: #5b6475;
+      --background: #f8fafc;
+      --white: #ffffff;
+      --border: #e5eaf2;
+    }
 
-<title>Portfolio | Biswadeep Mishra</title>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Arial, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--background);
+    }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI,Arial;
-scroll-behavior:smooth;
-}
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
 
-body{
-background:white;
-color:#111;
-}
+    a:hover {
+      color: var(--blue-dark);
+    }
 
-/* HEADER */
+    .container {
+      width: min(1080px, 90%);
+      margin: 0 auto;
+    }
 
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 10%;
-border-bottom:1px solid #eee;
-}
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+    }
 
-header h1{
-color:#2563eb;
-}
+    .nav {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
 
-nav a{
-margin-left:25px;
-text-decoration:none;
-color:#111;
-font-weight:500;
-}
+    .brand {
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--text);
+    }
 
-nav a:hover{
-color:#2563eb;
-}
+    .brand span {
+      color: var(--blue);
+    }
 
-/* HERO */
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+    }
 
-.hero{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:80px 10%;
-flex-wrap:wrap;
-}
+    nav a {
+      color: var(--text);
+      font-size: 0.94rem;
+      font-weight: 600;
+    }
 
-.hero-text{
-max-width:600px;
-}
+    nav a:hover {
+      color: var(--blue);
+    }
 
-.hero h2{
-font-size:42px;
-}
+    .hero {
+      background: var(--white);
+      padding: 86px 0 78px;
+      border-bottom: 1px solid var(--border);
+    }
 
-.hero span{
-color:#2563eb;
-}
+    .hero-content {
+      max-width: 790px;
+    }
 
-.hero h3{
-margin-top:10px;
-color:#2563eb;
-}
+    .eyebrow {
+      color: var(--blue);
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.8rem;
+      margin-bottom: 12px;
+    }
 
-.hero p{
-margin-top:15px;
-color:#444;
-}
+    h1 {
+      font-size: clamp(2.4rem, 6vw, 4.4rem);
+      line-height: 1.1;
+      letter-spacing: -0.04em;
+    }
 
-.hero img{
-width:220px;
-border-radius:50%;
-border:5px solid #2563eb;
-box-shadow:0 0 40px rgba(37,99,235,0.4);
-}
+    .hero h1 span {
+      color: var(--blue);
+    }
 
-/* SECTIONS */
+    .hero p {
+      max-width: 700px;
+      color: var(--muted);
+      font-size: 1.1rem;
+      margin: 22px 0 28px;
+    }
 
-.section{
-padding:80px 10%;
-}
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
 
-.section h2{
-color:#2563eb;
-margin-bottom:30px;
-}
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border-radius: 9px;
+      font-weight: 700;
+      border: 1px solid var(--blue);
+      transition: 0.2s ease;
+    }
 
-/* CARDS */
+    .button.primary {
+      background: var(--blue);
+      color: var(--white);
+    }
 
-.card{
-background:white;
-padding:25px;
-border:1px solid #eee;
-border-radius:10px;
-margin-bottom:20px;
-transition:0.3s;
-}
+    .button.primary:hover {
+      background: var(--blue-dark);
+    }
 
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 10px 20px rgba(0,0,0,0.05);
-}
+    .button.secondary {
+      background: var(--white);
+      color: var(--blue);
+    }
 
-/* SKILLS GRID */
+    .button.secondary:hover {
+      background: #eff6ff;
+    }
 
-.skills{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
+    section {
+      padding: 70px 0;
+    }
 
-.skill-box{
-background:white;
-padding:20px;
-border-radius:8px;
-border:1px solid #e5e7eb;
-text-align:center;
-font-weight:500;
-transition:0.3s;
-}
+    .section-heading {
+      margin-bottom: 28px;
+    }
 
-.skill-box:hover{
-border:1px solid #2563eb;
-transform:scale(1.05);
-}
+    .section-heading h2 {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      letter-spacing: -0.025em;
+    }
 
-/* CONTACT */
+    .section-heading p {
+      color: var(--muted);
+      margin-top: 7px;
+    }
 
-button{
-background:#2563eb;
-color:white;
-border:none;
-padding:12px 20px;
-border-radius:6px;
-cursor:pointer;
-margin-top:10px;
-}
+    .about-copy {
+      max-width: 850px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
 
-button:hover{
-background:#1d4ed8;
-}
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
 
-/* FOOTER */
+    .tag {
+      display: inline-block;
+      padding: 8px 13px;
+      border: 1px solid #dbe7ff;
+      border-radius: 999px;
+      color: #1e40af;
+      background: #eff6ff;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
 
-footer{
-text-align:center;
-padding:30px;
-border-top:1px solid #eee;
-margin-top:40px;
-color:#555;
-}
+    .tools-grid,
+    .experience-list {
+      display: grid;
+      gap: 18px;
+    }
 
-</style>
+    .tools-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
+    .card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 5px 20px rgba(15, 23, 42, 0.035);
+    }
+
+    .card h3 {
+      font-size: 1.12rem;
+      margin-bottom: 10px;
+    }
+
+    .card p,
+    .card li {
+      color: var(--muted);
+    }
+
+    .card ul {
+      padding-left: 20px;
+      margin-top: 12px;
+    }
+
+    .card li + li {
+      margin-top: 7px;
+    }
+
+    .job-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 8px 20px;
+      margin-bottom: 12px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      color: var(--blue);
+    }
+
+    .job-date {
+      color: var(--muted);
+      font-weight: 650;
+      font-size: 0.94rem;
+    }
+
+    .job-location {
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+
+    .tech-line {
+      margin-top: 14px;
+      font-size: 0.93rem;
+    }
+
+    .tech-line strong {
+      color: var(--text);
+    }
+
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 28px;
+    }
+
+    .contact-items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 26px;
+      margin-top: 18px;
+    }
+
+    .contact-items a {
+      overflow-wrap: anywhere;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px 0;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      background: var(--white);
+    }
+
+    footer span {
+      color: var(--blue);
+    }
+
+    @media (max-width: 680px) {
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px 17px;
+      }
+
+      .hero {
+        padding: 62px 0;
+      }
+
+      section {
+        padding: 52px 0;
+      }
+
+      .tools-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-
-<h1>Portfolio</h1>
-
-<nav>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#contact">Contact</a>
-</nav>
-
-</header>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-text">
-
-<h2>Hello I'm <span>Biswadeep Mishra</span></h2>
-
-<h3>I work as <span id="typing"></span></h3>
-
-<p>
-Technical Support Associate with experience in SaaS platforms, API troubleshooting,
-SQL queries and resolving production issues.
-</p>
-
-</div>
-
-<img src="profile.png">
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section class="section" id="about">
-
-<h2>About Me</h2>
-
-<div class="card">
-
-<p>
-Technical support Associate experienced in troubleshooting communication platforms,
-analyzing call logs and resolving technical issues related to VoIP systems.
-Skilled in SQL queries, API debugging and system analysis to ensure
-smooth product performance and customer satisfaction.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- SKILLS -->
-
-<section class="section" id="skills">
-
-<h2>Technical Skills</h2>
-
-<div class="skills">
-
-<div class="skill-box">VoIP Systems</div>
-<div class="skill-box">SQL</div>
-<div class="skill-box">API Troubleshooting</div>
-<div class="skill-box">Postman</div>
-<div class="skill-box">Log Analysis</div>
-<div class="skill-box">SaaS Support</div>
-<div class="skill-box">Incident Management</div>
-<div class="skill-box">Technical Support</div>
-
-</div>
-
-</section>
-
-
-<!-- EXPERIENCE -->
-
-<section class="section" id="experience">
-
-<h2>Experience</h2>
-
-<div class="card">
-
-<h3>Technical Support Associate</h3>
-
-<p><b>Superfone – Bangalore</b></p>
-
-<p>
-Managing VoIP communication platform operations and troubleshooting
-call related issues and API integrations.
-Investigating system logs and resolving incidents while collaborating
-with engineering teams to ensure platform stability.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Operations Associate</h3>
-
-<p><b>Myntra – Kolkata</b></p>
-
-<p>
-Delivered high-quality customer support by resolving platform issues, 
-managing support tickets, and ensuring SLA-driven service excellence in a fast-paced environment.
-</p>
-
-</div>  
-
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="section" id="contact">
-
-<h2>Contact</h2>
-
-<div class="card">
-
-<p>Email: biswadeepmishra3@gmail.com</p>
-
-<p>Phone: +91 8420177256</p>
-
-<p>LinkedIn: linkedin.com/in/biswadeep-mishra</p>
-
-<button onclick="window.location.href='mailto:rmishra.connect@gmail.com'" style="font-weight:bold;">
-Send Email
-</button>
-
-<br><br>
-
-<button onclick="window.open('https://www.linkedin.com/in/biswadeep-mishra-7a967a215/','_blank')" style="font-weight:bold;">
-View LinkedIn Profile
-</button>
-
-</div>
-
-</section>
-
-
-<footer>
-
-<p>© 2026 Biswadeep Mishra | Portfolio</p>
-
-</footer>
-
-
-<script>
-
-var typed = new Typed("#typing", {
-
-strings:[
-"Technical Support Associate",
-"Integration support Associate",
-"Product Support Associate",
-"API Support Associate"
-],
-
-typeSpeed:60,
-backSpeed:40,
-loop:true
-
-});
-
-</script>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="#home">Biswadeep<span>.</span></a>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#tools">Tools</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <div class="container hero-content">
+
+        <div class="eyebrow">Product &amp; Application Support</div>
+
+        <h1>
+          Hi, I'm <span>Biswadeep Mishra.</span>
+        </h1>
+
+        <p>
+          I work on SaaS product support, API integrations, production incident
+          investigation, log analysis, and customer case management. I enjoy
+          identifying root causes and coordinating with technical teams to
+          deliver reliable customer outcomes.
+        </p>
+
+        <div class="button-row">
+          <a class="button primary" href="#experience">
+            View Experience
+          </a>
+
+          <a class="button secondary"
+             href="mailto:biswadeepmishra3@gmail.com">
+            Contact Me
+          </a>
+
+          <a class="button secondary"
+             href="https://www.linkedin.com/in/biswadeep-mishra-7a967a215/"
+             target="_blank"
+             rel="noopener noreferrer">
+            LinkedIn
+          </a>
+
+          <a class="button secondary"
+             href="https://github.com/biswadeepmishra3"
+             target="_blank"
+             rel="noopener noreferrer">
+            GitHub
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>
+            Customer-focused technical support with an integration-first mindset.
+          </p>
+        </div>
+
+        <p class="about-copy">
+          I'm a Product Support Specialist based in Bangalore, India, with
+          experience supporting SaaS products, investigating API and integration
+          issues, reviewing logs, and coordinating incident resolution.
+
+          At UrbanPiper, I support integrations between restaurant POS systems
+          and food ordering platforms, monitor Kibana logs and API behavior,
+          track GitHub incidents, and manage customer cases through Salesforce
+          while keeping SLA commitments in focus.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section id="skills">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Skills</h2>
+          <p>Core areas I work with.</p>
+        </div>
+
+        <div class="tag-list">
+          <span class="tag">Product Support</span>
+          <span class="tag">SaaS Support</span>
+          <span class="tag">REST API Troubleshooting</span>
+          <span class="tag">API Integrations</span>
+          <span class="tag">Log Analysis</span>
+          <span class="tag">Root Cause Analysis</span>
+          <span class="tag">SQL</span>
+          <span class="tag">Database Management</span>
+          <span class="tag">Incident Management</span>
+          <span class="tag">SLA Management</span>
+          <span class="tag">Salesforce Case Management</span>
+          <span class="tag">JSON &amp; HTTP Status Codes</span>
+          <span class="tag">OAuth &amp; Authentication</span>
+          <span class="tag">POS Integrations</span>
+          <span class="tag">VoIP &amp; SIP</span>
+          <span class="tag">Customer Communication</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TOOLS SECTION -->
+    <section id="tools">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Tools &amp; Technologies</h2>
+          <p>
+            Tools and technologies used across support, investigation, and integration work.
+          </p>
+        </div>
+
+        <div class="tools-grid">
+
+          <article class="card">
+            <h3>Monitoring &amp; Incident Tracking</h3>
+            <p>Kibana, Grafana, GitHub</p>
+          </article>
+
+          <article class="card">
+            <h3>API &amp; Integration</h3>
+            <p>Postman, REST APIs, JSON, OAuth, Webhooks</p>
+          </article>
+
+          <article class="card">
+            <h3>Database &amp; Reporting</h3>
+            <p>SQL, MySQL, MongoDB, Metabase</p>
+          </article>
+
+          <article class="card">
+            <h3>Case Management &amp; Collaboration</h3>
+            <p>Salesforce, Slack, GitHub</p>
+          </article>
+
+          <article class="card">
+            <h3>Development &amp; Systems</h3>
+            <p>Java, Spring Boot, HTML, JavaScript, Linux</p>
+          </article>
+
+          <article class="card">
+            <h3>Communication Technologies</h3>
+            <p>VoIP, SIP, Telephony, WhatsApp API</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE SECTION -->
+    <section id="experience">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Experience</h2>
+          <p>
+            My professional journey in product support and technical operations.
+          </p>
+        </div>
+
+        <div class="experience-list">
+
+          <!-- URBANPIPER -->
+          <article class="card">
+
+            <div class="job-top">
+              <div>
+                <h3>UrbanPiper</h3>
+                <div class="job-title">Product Support Specialist</div>
+                <div class="job-location">Bangalore, India</div>
+              </div>
+
+              <div class="job-date">July 2026 – Present</div>
+            </div>
+
+            <ul>
+              <li>
+                Provide product support to restaurant partners for integrations
+                between POS systems and food ordering platforms.
+              </li>
+
+              <li>
+                Monitor Kibana logs, API behavior, and GitHub incidents to
+                investigate technical issues and support root cause analysis.
+              </li>
+
+              <li>
+                Manage customer cases through Salesforce, communicate updates,
+                and coordinate resolutions with internal stakeholders and
+                external platforms.
+              </li>
+
+              <li>
+                Track customer-impacting incidents and support timely resolution
+                in line with SLA expectations.
+              </li>
+            </ul>
+
+            <p class="tech-line">
+              <strong>Tools:</strong>
+              Kibana, Salesforce, GitHub, Slack, REST APIs, JSON, SQL
+            </p>
+
+          </article>
+
+          <!-- SUPERFONE -->
+          <article class="card">
+
+            <div class="job-top">
+              <div>
+                <h3>Superfone</h3>
+                <div class="job-title">Technical Support Associate</div>
+                <div class="job-location">Bangalore, India</div>
+              </div>
+
+              <div class="job-date">September 2024 – June 2026</div>
+            </div>
+
+            <ul>
+              <li>
+                Supported customers with SaaS communication products, calling
+                workflows, CRM processes, API integrations, and webhooks.
+              </li>
+
+              <li>
+                Investigated technical issues by reviewing logs, API responses,
+                and data flows, using Postman and database queries where appropriate.
+              </li>
+
+              <li>
+                Worked with QA and engineering teams to resolve issues involving
+                AI voice agents, IVR, telephony, and WhatsApp API chatbots.
+              </li>
+
+              <li>
+                Diagnosed CRM lead-sync issues by checking form submissions and
+                field mappings, then validating the corrected integration.
+              </li>
+
+              <li>
+                Helped train non-technical teammates on IVR creation and
+                selection to improve the setup process.
+              </li>
+            </ul>
+
+            <p class="tech-line">
+              <strong>Tools:</strong>
+              Postman, SQL, MySQL, Grafana, Metabase, Slack, AnyDesk
+            </p>
+
+          </article>
+
+          <!-- MYNTRA -->
+          <article class="card">
+
+            <div class="job-top">
+              <div>
+                <h3>Myntra</h3>
+                <div class="job-title">Operations Associate</div>
+              </div>
+            </div>
+
+            <ul>
+              <li>
+                Supported e-commerce operations and customer queries related
+                to orders, returns, payments, and complaints.
+              </li>
+
+              <li>
+                Reviewed cases, maintained accurate records, and coordinated
+                follow-ups to help resolve customer issues.
+              </li>
+            </ul>
+
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Contact</h2>
+          <p>
+            Feel free to connect with me about product support, application
+            support, and integration opportunities.
+          </p>
+        </div>
+
+        <div class="contact-card">
+
+          <div class="contact-items">
+            <a href="mailto:biswadeepmishra3@gmail.com">
+              biswadeepmishra3@gmail.com
+            </a>
+
+            <a href="https://www.linkedin.com/in/biswadeep-mishra-7a967a215/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn Profile
+            </a>
+
+            <a href="https://github.com/biswadeepmishra3"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub Profile
+            </a>
+
+            <span>Bangalore, India</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      Made with <span>♥</span> by Biswadeep
+    </div>
+  </footer>
 
 </body>
 </html>
